@@ -61,7 +61,9 @@ class UiThreadDemoFragment : BaseFragment() {
         logThreadInfo("updateRemainingTime: $remainingTimeSeconds seconds")
 
         if (remainingTimeSeconds > 0) {
+            logThreadInfo("benchmark started 2")
             txtRemainingTime.text = "$remainingTimeSeconds seconds remaining"
+            logThreadInfo("benchmark started 3")
             Handler(Looper.getMainLooper()).postDelayed({
                 updateRemainingTime(remainingTimeSeconds - 1)
             }, 1000)
