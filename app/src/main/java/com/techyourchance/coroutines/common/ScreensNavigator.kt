@@ -4,6 +4,7 @@ import android.os.Bundle
 import com.ncapdevi.fragnav.FragNavController
 import com.ncapdevi.fragnav.FragNavController.RootFragmentListener
 import com.techyourchance.coroutines.demonstrations.backgroundthread.BackgroundThreadDemoFragment
+import com.techyourchance.coroutines.demonstrations.backgroundthread.BackgroundThreadDemoTestFragment
 import com.techyourchance.coroutines.demonstrations.basiccoroutines.BasicCoroutinesDemoFragment
 import com.techyourchance.coroutines.demonstrations.concurrentcoroutines.ConcurrentCoroutinesDemoFragment
 import com.techyourchance.coroutines.demonstrations.coroutinescancellation.CoroutinesCancellationDemoFragment
@@ -69,6 +70,10 @@ class ScreensNavigator(private val fragNavController: FragNavController) {
 
     fun toBackgroundThreadDemo() {
         fragNavController.pushFragment(BackgroundThreadDemoFragment.newInstance())
+    }
+
+    fun toBackgroundTestThreadDemo() {
+        fragNavController.pushFragment(BackgroundThreadDemoTestFragment.newInstance())
     }
 
     fun toBasicCoroutinesDemo() {
